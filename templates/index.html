@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Disease Detection</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+  	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
     </head>
     <body>
         <h1>Sysmtoms based disease detection</h1>
         <br><br>
 
         <h3>Enter your symptoms:</h3>
-        <form action="{{ url_for("predict")}}" method="post">
-            Symptom 1: <input type="text" name="sym1" /><br><br>
-            Symptom 2: <input type="text" name="sym2" /><br><br>
-            Symptom 3: <input type="text" name="sym3" /><br><br>
-            Symptom 4: <input type="text" name="sym4" /><br><br>
-            Symptom 5: <input type="text" name="sym5" /><br><br>
+        <form action="{{ url_for("predict")}}" method="post" id="user-form">
+            Symptom 1: <input type="text" name="sym1" id="sym1"/><br><br>
+            Symptom 2: <input type="text" name="sym2" id="sym2"/><br><br>
+            Symptom 3: <input type="text" name="sym3" id="sym3"/><br><br>
+            Symptom 4: <input type="text" name="sym4" id="sym4"/><br><br>
+            Symptom 5: <input type="text" name="sym5" id="sym5"/><br><br>
 
             <button type="submit">Predict</button><br><br>
         </form>
         <br><br>
 
         <h2>{{ prediction_text }}</h2>
+
+        <script type="text/javascript" src="{{url_for("static", filename="autocomplete.js")}}"></script>
     </body>
 </html>
