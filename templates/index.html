@@ -1,28 +1,45 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
+
         <title>Disease Detection</title>
+
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
-  	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+
     </head>
+
     <body>
-        <h1>Sysmtoms based disease detection</h1>
-        <br><br>
 
-        <h3>Enter your symptoms:</h3>
-        <form action="{{ url_for("predict")}}" method="post" id="user-form">
-            Symptom 1: <input type="text" name="sym1" id="sym1"/><br><br>
-            Symptom 2: <input type="text" name="sym2" id="sym2"/><br><br>
-            Symptom 3: <input type="text" name="sym3" id="sym3"/><br><br>
-            Symptom 4: <input type="text" name="sym4" id="sym4"/><br><br>
-            Symptom 5: <input type="text" name="sym5" id="sym5"/><br><br>
+        <div class="predict">
+            <h1>Sysmtoms based disease detection</h1>
+            <br><br>
+            
+            <h3>Enter your symptoms:</h3>
+            <form action="{{ url_for("predict")}}" method="post" id="user-form">
+                Symptom 1: <input type="text" name="sym1" id="sym1"/><br><br>
+                Symptom 2: <input type="text" name="sym2" id="sym2"/><br><br>
+                Symptom 3: <input type="text" name="sym3" id="sym3"/><br><br>
+                Symptom 4: <input type="text" name="sym4" id="sym4"/><br><br>
+                Symptom 5: <input type="text" name="sym5" id="sym5"/><br><br>
 
-            <button type="submit">Predict</button><br><br>
-        </form>
-        <br><br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+            </form>
+            <br><br>
 
-        <h2>{{ prediction_text }}</h2>
+            <h2>{{ prediction_text }}</h2>
 
-        <script type="text/javascript" src="{{url_for("static", filename="autocomplete.js")}}"></script>
+            <script type="text/javascript" src="{{url_for("static", filename="autocomplete.js")}}"></script>
+        </div>
+
     </body>
+    
 </html>
