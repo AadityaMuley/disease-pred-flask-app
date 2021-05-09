@@ -1,7 +1,7 @@
 # Symptoms Based Disease Prediction  - Flask App
 Random Forest Classifier to predict disease based on different symptoms deployed on a Flask web-app.
 
-## Steps to run this app (**don't directly clone the repo**):
+## Steps to run this app (**WARNING: Don't directly clone the repo**):
 - Create a separate folder for your project wherever you want and ensure you are in that working directory on your terminal (my folder name is ***disease_det_flask*** so change it according to your folder name):
     ```
     mkdir disease_det_flask
@@ -27,3 +27,9 @@ Random Forest Classifier to predict disease based on different symptoms deployed
     flask run
     ```
   This will display an URL on the terminal. Open that url and the web app will open up!
+  
+  ## Preview:
+  ### Input:
+  ![alt text](https://github.com/AadityaMuley/disease-pred-flask-app/blob/main/screenshots/ss-1.png?raw=true) 
+  ### Output:
+  ![alt text](https://github.com/AadityaMuley/disease-pred-flask-app/blob/main/screenshots/ss-2.png?raw=true)
